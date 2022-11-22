@@ -1,6 +1,6 @@
-import React from "react";
 import S from "@sanity/desk-tool/structure-builder";
 
+// Sets up studio environment
 export default () =>
   S.list()
     .title("Base")
