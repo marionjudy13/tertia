@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AiOutlineMenu from "@meronex/icons/ai/AiOutlineMenu";
 import CgMenu from "@meronex/icons/cg/CgMenu";
 import NavMobileMenu from "./NavMobileMenu";
 
@@ -16,7 +15,7 @@ export default function Nav({ props: { navItems } }) {
           <li key={key}>{item.copy}</li>
         ))}
       </ul>
-      <CgMenu onClick={showMenu} class="md:hidden" size="2em" />
+      <CgMenu onClick={showMenu} class="md:hidden" size="3em" />
       <NavMobileMenu navItems={navItems} showMenu={showMenu} active={active} />
     </nav>
   );
