@@ -8,7 +8,7 @@ export default function Nav({ props: { navItems } }) {
     setActive(!active);
   };
   return (
-    <nav class="flex w-full justify-between px-5 md:px-10 lg:px-16 py-5 items-center shadow-[0_0_5px_2px_rgba(26,26,26,.3)]">
+    <nav class="flex fixed bg-white w-full justify-between shadow-lg shadow-black px-5 md:px-10 lg:px-16 py-5 items-center z-10">
       <img src="/tertiaLogo_green.png" alt="Tertia Logo" class="w-[150px]" />
       <ul className="hidden uppercase items-center md:flex">
         {navItems.map((navItem, key) => (

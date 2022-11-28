@@ -2,6 +2,7 @@ import Head from "next/head";
 import { getClient } from "../utils/client";
 import { NavItemProps } from "../types/NavItemProps";
 import Nav from "./Components/Nav";
+import Hero from "./Components/Hero";
 
 interface Props {
   data: {
@@ -25,7 +26,7 @@ export default function Home({ data }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav props={data.menu} />
-      <main>hi!</main>
+      <Hero />
     </>
   );
 }

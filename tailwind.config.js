@@ -14,7 +14,11 @@ module.exports = {
       black: "#000",
       white: "#fff",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "tertia-bg": "url('/tertia-bg.jpg')",
+      },
+    },
   },
   variants: {
     backgroundColor: ["hover", "last"],
