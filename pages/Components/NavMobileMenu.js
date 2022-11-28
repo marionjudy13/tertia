@@ -7,15 +7,16 @@ function NavMobileMenu({ navItems, showMenu, active }) {
     <div
       class={
         active
-          ? "flex-col flex items-center fixed inset-0 uppercase bg-black backdrop-blur-lg gap-8 justify-center p-8  md:hidden"
+          ? "flex-col flex items-center fixed inset-0 uppercase  backdrop-blur-lg gap-8 justify-center p-8  md:hidden"
           : "hidden"
       }
     >
       <div>
         <CgClose
           onClick={showMenu}
-          class="cursor-pointer absolute top-6 right-4"
+          class="cursor-pointer absolute top-6 right-5 md:right-10"
           size="3em"
+          style={{ color: "#43464d" }}
         />
         <ul>
           {navItems.map((navItem, _key) => (

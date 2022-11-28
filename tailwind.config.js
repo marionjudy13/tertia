@@ -11,8 +11,13 @@ module.exports = {
     colors: {
       green: "#1EB999",
       gray: "#43464d",
+      black: "#000",
+      white: "#fff",
     },
     extend: {},
+  },
+  variants: {
+    backgroundColor: ["hover", "last"],
   },
   plugins: [],
 };

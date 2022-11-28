@@ -8,11 +8,16 @@ export default function Nav({ props: { navItems } }) {
     setActive(!active);
   };
   return (
-    <nav class="flex w-full justify-between px-5 py-5 items-center shadow-[0_0_5px_2px_rgba(26,26,26,.3)]">
+    <nav class="flex w-full justify-between px-5 md:px-10 lg:px-16 py-5 items-center shadow-[0_0_5px_2px_rgba(26,26,26,.3)]">
       <img src="/tertiaLogo_green.png" alt="Tertia Logo" class="w-[150px]" />
-      <ul className="hidden md:flex">
-        {navItems.map((item, key) => (
-          <li key={key}>{item.copy}</li>
+      <ul className="hidden uppercase items-center md:flex">
+        {navItems.map((navItem, key) => (
+          <li
+            key={key}
+            class="cursor-pointer text-xs lg:text-sm font-medium ml-10 lg:ml-12 last:text-green hover:text-green transition-colors duration-200 hover:last:bg-green hover:last:text-white hover:last:border-green last:border last:py-3 last:px-7"
+          >
+            {navItem.copy}
+          </li>
         ))}
       </ul>
       <CgMenu onClick={showMenu} class="md:hidden" size="3em" />
