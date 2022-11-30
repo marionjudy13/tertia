@@ -1,7 +1,46 @@
-import React from "react";
+import { getClient } from "../utils/client";
+import { NavItemProps } from "../types/NavItemProps";
+import Layout from "./Components/Layout";
+import Hero from "./Components/Hero";
 
-function About() {
-  return <div>About</div>;
+interface Props {
+  data: {
+    menu: NavItemProps;
+    site: {
+      siteTitle: string;
+      siteDescription: string;
+    };
+    page: {
+      title: string;
+    };
+  };
 }
 
-export default About;
+export default function About({ data }: Props) {
+  return (
+    <Layout site={data.site} menu={data.menu}>
+      <Hero />
+    </Layout>
+  );
+}
+
+export async function getStaticProps() {
+  const data = await getClient().fetch(`{
+    "menu": *[_type == "navMenu" && title == "Topnav"][0],
+    "site": *[_type == "globalSettings"][0],
+    "page": *[_type == "aboutPage"][0],
+  }`);
+
+  // Check for 404
+  if (!data.page.title) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      data,
+    },
+  };
+}

@@ -18,5 +18,22 @@ export default {
       title: "Main logo",
       type: "image",
     },
+    {
+      name: "altLogo",
+      title: "Alternate logo",
+      type: "image",
+    },
+    {
+      name: "socials",
+      title: "Socials",
+      type: "array",
+      of: [
+        {
+          name: "url",
+          title: "URL",
+          type: "string",
+        },
+      ],
+    },
   ],
 };

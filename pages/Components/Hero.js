@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <header class="flex flex-wrap absolute top-[92.5px] align-middle text-center justify-center items-center w-full bg-tertia-bg bg-cover bg-center bg-no-repeat py-20 px-10 sm:py-32 lg:px-14 lg:py-40">
+    <div class="flex flex-wrap absolute top-[92.5px] align-middle text-center justify-center items-center w-full bg-tertia-bg bg-cover bg-center bg-no-repeat py-20 px-10 sm:py-32 lg:px-14 lg:py-40">
       <div class="flex flex-wrap justify-center max-w-xl sm:max-w-3xl xl:max-w-7xl">
         <img
           src="/tertia-logo-white.png"
@@ -13,7 +13,7 @@ function Hero() {
           female-identifying survivors of emotional, physical, and sexual abuse.
         </h1>
       </div>
-    </header>
+    </div>
   );
 }
 

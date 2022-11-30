@@ -1,11 +1,17 @@
 import React from "react";
 import CgClose from "@meronex/icons/cg/CgClose";
 import Link from "next/link";
+import { NavItemProps } from "../../types/NavItemProps";
 
-function NavMobileMenu({ navItems, showMenu, active }) {
+interface NavMobileProps extends NavItemProps {
+  showMenu: Function;
+  active: boolean;
+}
+
+function NavMobileMenu({ navItems, showMenu, active }: NavMobileProps) {
   return (
     <div
-      class={
+      className={
         active
           ? "flex-col flex items-center fixed inset-0 uppercase  backdrop-blur-lg gap-8 justify-center p-8  md:hidden"
           : "hidden"
@@ -14,14 +20,14 @@ function NavMobileMenu({ navItems, showMenu, active }) {
       <div>
         <CgClose
           onClick={showMenu}
-          class="cursor-pointer absolute top-6 right-5 md:right-10"
+          className="cursor-pointer absolute top-6 right-5 md:right-10"
           size="3em"
           style={{ color: "#43464d" }}
         />
         <ul>
           {navItems.map((navItem, _key) => (
             <Link href={navItem.path} key={navItem._key}>
-              <li class="cursor-pointer font-bold text-3xl my-3">
+              <li className="cursor-pointer font-bold text-3xl my-3">
                 {navItem.copy}
               </li>
             </Link>

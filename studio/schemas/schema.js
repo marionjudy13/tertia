@@ -7,6 +7,10 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import page from "./page";
 import globalSettings from "./globalSettings";
 import navMenu from "./navMenu";
+import homePage from "./homePage";
+import aboutPage from "./aboutPage";
+import richText from "./richText";
+import imageBanner from "./imageBanner";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -17,7 +21,11 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     page,
+    homePage,
     globalSettings,
     navMenu,
+    richText,
+    imageBanner,
+    aboutPage,
   ]),
 });
